@@ -14,10 +14,36 @@ from predictors.base import Predictor
 
 # Choice label (as configured in Label Studio) -> prompt shown to CLIP.
 DEFAULT_PROMPTS: dict[str, str] = {
-    "nature-meets-human": "a photo where nature and human-made structures appear together",
-    "urban-only": "a photo of only urban or man-made environments with no nature",
-    "nature-only": "a photo of only nature with no human presence or structures",
-    "side-angle": "a photo taken from an oblique or side angle rather than straight down",
+    # Meta
+    "not-overhead": "a ground-level photo or oblique angle view with horizon visible",
+    "unclear": "a blurry, abstract, or hard to interpret aerial image",
+    # Water
+    "ocean": "an aerial photo of the ocean or open sea",
+    "lake": "an aerial photo of a lake",
+    "river": "an aerial photo of a river or stream",
+    "coastline": "an aerial photo of a coastline or beach",
+    # Land use
+    "agriculture": "an aerial photo of farmland, crop fields, or agricultural land",
+    "urban": "an aerial photo of a city or urban area",
+    "residential": "an aerial photo of residential neighborhoods or housing",
+    "industrial": "an aerial photo of industrial facilities or factories",
+    "mining": "an aerial photo of a mine or quarry",
+    # Nature
+    "forest": "an aerial photo of a forest or dense trees",
+    "desert": "an aerial photo of a desert or arid landscape",
+    "grassland": "an aerial photo of grassland, prairie, or savanna",
+    "wetland": "an aerial photo of a wetland, marsh, or swamp",
+    "ice-snow": "an aerial photo of ice, snow, or glaciers",
+    # Infrastructure
+    "transport": "an aerial photo of roads, highways, airports, or ports",
+    "energy": "an aerial photo of solar panels, wind turbines, or power plants",
+    "dam": "an aerial photo of a dam or reservoir",
+    # Events
+    "natural-disaster": "an aerial photo of a natural disaster like flood, fire, or earthquake damage",
+    "extreme-weather": "an aerial photo showing extreme weather effects",
+    "war-conflict": "an aerial photo of war damage or military conflict",
+    # Fallback
+    "other": "an aerial photo that does not fit other categories",
 }
 
 
